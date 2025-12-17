@@ -3,13 +3,14 @@ import './About.css'
 import Cards from './Cards'
 
 
+
 const About = () => {
   return (
     <>
     <div className="about-container">
 
 
-      {/* LEFT SIDE IMAGE */}
+    
       <div className="about-left">
         <img src="imagegirls.png" alt="Profile"/>
         <h5>UX / UI Designer</h5>
@@ -55,6 +56,7 @@ const About = () => {
      <div className="about-cards-section">
                <Cards/>
        </div>
+
       </>
   )
 }

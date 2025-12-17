@@ -1,22 +1,26 @@
 import React from 'react'
-import './card.css';
+import './Card.css'
 
 
 
 const Card = (props) => {
 let course = props.course;
+
+console.log("card ke uner " , course);
 return (
     <div className="card">
         <div className="card-image-container">
-             <img src={course.image.url}></img>
-            
+            <img src={course?.image?.url} alt="" /> 
+
+               
             </div>
              <div className="card-info-container">
-          <p>{course.title}</p>
+          <p>{course?.title}</p>
 
-          <p>{course.description}</p>
+          <p>{course?.description}</p>
 
-           </div> </div>
+          </div> 
+    </div>
   )
 }
 

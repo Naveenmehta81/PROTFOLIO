@@ -1,39 +1,46 @@
 import React, { useState } from 'react';
-import Card  from './Card'
-import './cards.css';
+import Card from './Card';
+import './Cards.css'
+
+
 
  const Cards = (props) => {
-    let courses = props.courses;
+    let course = props.course;
+
+    console.log("cards ke under" , course);
     let category = props.category;
 
     
-
+   if (!course) return <p>Loading...</p>;
 
 
     function getCourses(){
       if(category === "All"){
           let allcourses =[];
         // getCouses hai ye sara data ek array me la kr de rha hai 
-        Object.values(courses).forEach(array => {
+        Object.values(course).forEach(array => {
              array.forEach(coursedata =>{
                 allcourses.push(coursedata);
              });
-        });
+        }); 
         return allcourses;
     }
     else{
-      return courses[category];
+      return course[category];
     }
       }
-      
+
+
+// function show() {
+//   return Object.values(course).flat();
+// }
        
   return (
     <div className="cards-container">
         {
-        getCourses().map((course) =>{
-           return <Card key={course.id} course={course} 
-          />
-        })
+         getCourses().map((course , index ) =>(
+         <Card key={course.id || index} course={course}  />
+        ))
     }
     </div>
   )

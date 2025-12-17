@@ -1,112 +1,133 @@
-/* 1. Reset & Main Layout */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body, html {
-  height: 100%;
-  overflow: hidden; /* Prevents scrollbars */
-}
-
-.container {
+.container{
   position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-/* Hide the breaks so the layout fits perfectly top-to-bottom */
-.container br {
-  display: none;
-}
-
-/* 2. Contact Details (Phone/Email) */
-.detail {
-  position: absolute;
-  top: 40px;
-  left: 60px;         /* Positioned on the LEFT (above the text) */
-  display: flex;
-  gap: 30px;
-  font-weight: bold;
-  color: #333;
-  z-index: 10;
-}
-
-/* 3. The Card - Main Split Layout */
-.card {
-  display: flex;
-  flex-direction: row-reverse; /* THIS SWAPS THEM: Text moves Left, Image moves Right */
-  width: 100%;
-  height: 100%;
-}
-
-/* 4. Image Section */
-.image-content {
-  flex: 1;            /* Takes 50% width */
-  height: 100%;
-}
-
-.image-content img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;  /* Covers full height without stretching */
+  overflow: hidden;
+  outline: none;
+  box-sizing: border-box;
   display: block;
-}
-
-/* 5. Text Section */
-.text-content {
-  flex: 1;            /* Takes 50% width */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 80px;    /* Spacing around text */
-  background-color: #f9f9f9;
-}
-
-/* Typography & Styling */
-.text-content h4 {
-  font-size: 1.2rem;
+  
+  background-color: #fff;
   color: #555;
-  margin-bottom: 10px;
+  font-weight: 400px;
+  margin-left: 100px;
+  min-height: 100vh;
+}
+.detail{
+  position: absolute;
+  margin: 20px;
+  padding: 50px 50px 30px ;
+  top: 0 ;
+  right: 0 ;
+  left: 0;
+  z-index: 5;
+  display: flex;
+  box-sizing: border-box;
+  font-weight: 400;
+  color: rgb(85,85,85);
+  cursor: none;
+  font-size: 15px;
+  text-align: start;
+  
+  
+
+}
+.number{
+  box-sizing: border-box;
+  color: rgb(11,11,19);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-style: none;
+}
+.email{
+    box-sizing: border-box;
+  color: rgb(11,11,19);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration-style: none;
+  margin-left: 30px;
 }
 
-.text-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.changestack {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #d0801f;
-  margin-bottom: 20px;
-  min-height: 40px;
-}
-
-.text-content p {
+.image-content{
+  width: 100%;
   max-width: 500px;
-  line-height: 1.6;
-  color: #666;
-  margin-bottom: 30px;
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  left: 900px;
+}
+
+.text-content{
+      margin-left: 120px;
+      position: absolute;
+      top: 10%;
+    
+}
+.h4{
+  box-sizing: border-box;
+  color: #0b0b13;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.h1{
+  box-sizing: border-box;
+  color: #0b0b13;
+  margin-bottom: 15px;
+  font-size: 110px;
+  font-weight:800;
+}
+.changestack{
+  color: #ff9301;
+  font-size: 30px;
+  font-weight: 500;
+}
+.para{
+  max-width: 450px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(85,85,85);
+  margin-bottom: 16px;
+
+}
+/* Wrapper */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
 /* Button */
 .btn {
-  width: fit-content;
-  padding: 15px 30px;
-  background-color: #222;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #000;
+  background-color: #000;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
 }
 
+/* Hover Effect */
 .btn:hover {
-  color: black;
-  background-color: white;
-  border: 1px solid black;
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-2px); /* subtle animation */
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  .btn-wrapper {
+    flex-direction: column; /* stack vertically */
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 280px;
+  }
 }
