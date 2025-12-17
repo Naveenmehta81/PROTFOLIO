@@ -32,6 +32,7 @@ const Workfilter = () => {
 
   return (
     <div className='filtercontainer'>
+
         <div className='filter-button'>
             {
                filterData.map((data) =>(
@@ -45,7 +46,7 @@ const Workfilter = () => {
                ))
             }
         </div>
-        <div>
+        <div className='filter-cards'>
            <Cards  course = {course} category={category}/>
         </div>
        

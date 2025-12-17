@@ -1,40 +1,39 @@
 import React from "react";
 import Card from "./Card";
-import "./Cards.css";
-
-import { FaLaptopFile, FaTv } from "react-icons/fa6";
+import "./Cards.css"; // We will put all card styles here
+import { FaLaptopCode, FaTv } from "react-icons/fa";
 import { GiCrossbow } from "react-icons/gi";
 
 const Cards = () => {
   const data = [
     {
-      icon: <FaLaptopFile />,
+      icon: <FaLaptopCode />,
       title: "Web Design",
-      description: "Design beautiful modern web pages",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
     },
     {
       icon: <FaTv />,
       title: "Web Development",
-      description: "Create full web applications",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
     },
     {
       icon: <GiCrossbow />,
       title: "SEO Marketing",
-      description: "Increase sales through SEO + marketing",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.",
     },
   ];
 
   return (
-    <div >
-      <h1  className="cards-title">What I Do?</h1>
-
+    <div className="cards-wrapper">
+      <h1 className="section-title">What I do?</h1>
+      
       <div className="cards-container">
         {data.map((item, index) => (
           <Card 
              key={index}
-            icon={item.icon}
-            title={item.title}
-            description={item.description}
+             icon={item.icon}
+             title={item.title}
+             description={item.description}
           />
         ))}
       </div>

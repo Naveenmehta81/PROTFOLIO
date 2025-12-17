@@ -2,44 +2,50 @@ import React, { useEffect, useState } from "react";
 import "./home.css";
 
 const Home = () => {
-  let tech = ["UI/UX", "MERN-Stack", "APP-DEVLOPER", "FULL-STACk DEVLOPER "];
-
+  let tech = ["UI/UX", "MERN-Stack", "APP-DEVELOPER", "FULL-STACK DEVELOPER"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % tech.length);
     }, 2000);
-    return () => clearInterval(interval); // use cleanup after unmounting
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="container">
-      <div className="detail">
-        <span className="number">+04 6543-9535-6515</span>
-        <span className="email">nairobi-degien@domian.com</span>
-      </div>
-      <br />
+    <div className="home-container">
       
-      <div className="image-nairobi">
-        <div className="image-content">
-          <img src="/imagegirls.png" alt="Nairobi Godot" />
+      
+      
+      <div className="hero-content">
+    
+        <div className="text-section">
+          
+        
+          <div className="contact-header">
+            <span className="phone">+04 6543-9535-6515</span>
+            <span className="email">nairobi-designer@domain.com</span>
+          </div>
+
+          <div className="intro-text">
+            <h4 className="greeting">Hello, My name is</h4>
+            <h1 className="name">Nairobi Gadot</h1>
+            <div className="role-container">
+              <span className="role">{tech[index]}</span>
+            </div>
+            <p className="description">  
+              I design and develop services for customers of all sizes,
+              specializing in creating stylish, modern websites, web services and
+              online stores.
+            </p>
+            <button className="download-btn">Download CV</button>
+          </div>
         </div>
 
-        <div className="text-content">
-          <h4 className="h4">Hello , My Name is </h4>
-          <br />
-          <h1 className="h1">Nairobi Godot</h1>
-
-          <div className="changestack">{tech[index]}</div>
-
-          <p className="para">  
-            I design and develop services for customers of all sizes,
-            specializing in creating stylish, modern websites, web services and
-            online stores.
-          </p>
-
-          <button className="btn">Donwload CV </button>
+        {/* Right Side: Image with Background Shape */}
+        <div className="image-section">
+          <div className="background-circle"></div> {/* The grey circle */}
+          <img src="/imagegirls.png" alt="Nairobi Godot" className="model-img" />
         </div>
       </div>
     </div>

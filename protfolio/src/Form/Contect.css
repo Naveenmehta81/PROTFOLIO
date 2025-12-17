@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.contact-container {
+  padding-left: 80px; 
+  min-height: 100vh;
+  background-color: #fbfbfd; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  gap: 100px; 
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid black;
+  
+}
+.leftsidboxe{
+  border: 2px solid black;
+}
+
+
+.box{
+  flex: 1;
+  max-width: 500px;
+  max-height: 100px;
+  justify-content: center;
+  align-items: flex-start;
+  border: 5px dotted green;
+  
+}
+
+.main-heading {
+  font-size: 55px;
+  font-weight: 700;
+  color: #0b0b13;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  
+}
+
+.dot {
+  color: #0b0b13; 
+}
+
+.contact-para {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 400px;
+}
+
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  border: 3px solid black;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0b0b13;
+}
+
+.icon {
+  font-size: 24px;
+  color: #ff9301; /* Make icons orange */
+}
+
+/* --- Right Section (Form Wrapper) --- */
+.contact-right {
+  flex: 1.2; /* Give form slightly more space */
+  max-width: 600px;
+  padding-right: 50px;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media screen and (max-width: 968px) {
+  .contact-container {
+    flex-direction: column; /* Stack vertically */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    gap: 40px;
+  }
+
+  .contact-left, .contact-right {
+    max-width: 100%; /* Full width on mobile */
+    padding-right: 0;
+  }
+
+  .main-heading {
+    font-size: 40px;
+  }
+}

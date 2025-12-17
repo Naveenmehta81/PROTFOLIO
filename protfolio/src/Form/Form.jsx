@@ -3,8 +3,8 @@ import "./Form.css";
 
 const Form = () => {
   const [data, setData] = useState({
-    fisrname: "",
-    lastname: "",
+    name: "",
+    email: "",
     subject: "",
     comment: "",
   });
@@ -17,55 +17,59 @@ const Form = () => {
   }
 
   function handlerclick(event) {
-    if (event.target.value === "") {
-      alert("enter info");
+    event.preventDefault(); // Prevent page reload
+    if (data.name === "") {
+      alert("Please enter info");
     } else {
       console.log(data);
     }
   }
 
   return (
-    <div>
-      <h1>Say Something</h1>
-      <div className='"name-row"'>
-        <form>
-          <div className="name-row">
-            <input
-              type="text"
-              placeholder="First name"
-              name="fisrname"
-              value={data.fisrname}
-              onChange={handlechange}
-            />
-            <input
-              type="text"
-              placeholder="last name"
-              name="lastname"
-              value={data.lastname}
-              onChange={handlechange}
-            />
-          </div>
-
+    <div className="form-wrapper">
+      <h2 className="form-heading">Say Something</h2>
+      
+      <form className="contact-form">
+        <div className="input-row">
           <input
+            className="input-field"
             type="text"
-            placeholder="subject"
-            name="subject"
-            value={data.subject}
+            placeholder="Name"
+            name="name"
+            value={data.name}
             onChange={handlechange}
           />
+          <input
+            className="input-field"
+            type="email"
+            placeholder="Email address"
+            name="email"
+            value={data.email}
+            onChange={handlechange}
+          />
+        </div>
 
-          <textarea
-            typeof="text"
-            placeholder="type comment"
-            name="comment"
-            value={data.comment}
-            onChange={handlechange}
-          />
-        </form>
-        <button className="btn1" onClick={handlerclick}>
-          send message
+        <input
+          className="input-field full-width"
+          type="text"
+          placeholder="Subject"
+          name="subject"
+          value={data.subject}
+          onChange={handlechange}
+        />
+
+        <textarea
+          className="input-field full-width textarea-field"
+          placeholder="Type comment"
+          name="comment"
+          value={data.comment}
+          onChange={handlechange}
+        />
+        
+        <button className="send-btn" onClick={handlerclick}>
+          Send Message
         </button>
-      </div>
+      </form>
     </div>
   );
 };

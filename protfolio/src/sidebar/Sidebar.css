@@ -1,41 +1,87 @@
+
 .sidebar-container {
-  width: 80px;
+  width: 200px;
   height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
   background-color: #fff;
-  border-right: 1px solid rgba(11, 11, 19, .1);
-  display: auto;
+  border-right: 1px solid #f0f0f0;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  z-index: -1;
+  
 }
+
 
 .logo {
-  height: 80px;
-  width: 80px;
-  line-height: 80px;
-  background: #ff9301;
+  height: 200px;
+  width: 200px;
+  background-color: #ff9301;
   color: #fff;
-  font-size: 40px;
-  font-weight: 600;
-  text-align: center;
+  font-size: 100px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 .nav-ul {
-  padding: 45px 0;
   list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px; 
 }
 
 .list {
-  padding: 15px 0;
-  font-size: 27px;
+  width: 300%;
+  display: flex;
+  justify-content: center;
 }
 
+
 .list a {
-  color: #555;
+  color: rgb(51,51,51);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 150px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+
+.list a svg {
+  font-size: 50px; 
 }
 
 .list a:hover {
+  background-color: #fff0d9; 
   color: #ff9301;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar-container {
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid #ddd;
+  }
+  .logo { display: none; }
+  .nav-ul {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin: 0;
+    height: 100%;
+  }
 }

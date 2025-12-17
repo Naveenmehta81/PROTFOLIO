@@ -1,0 +1,81 @@
+.cards-wrapper {
+  padding: 50px 50px 100px 50px;
+  background-color: #f9f9f9; /* Slight grey bg for this section */
+}
+
+/* Reuse the title style or copy it here */
+.cards-title {
+  /* same styles as section-title in About.css */
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+/* --- THE CARD STYLE --- */
+.card-box {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden; /* Clips the orange circle corner */
+  width: 30%; /* 3 cards in a row */
+  min-width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  position: relative;
+  padding: 40px 30px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Orange Corner Shape */
+.card-icon-bg {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 100px;
+  height: 100px;
+  background-color: #ff9301;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end; /* Push icon to bottom right of circle */
+  justify-content: flex-end;
+  padding: 20px; /* Space for icon inside circle */
+}
+
+.card-icon {
+  font-size: 32px;
+  color: #fff;
+  z-index: 2;
+  margin-right: 15px; /* Adjust to center visually in the visible part */
+  margin-bottom: 5px;
+}
+
+.card-content {
+  margin-top: 40px; /* Push text down below the circle area */
+}
+
+.card-box h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.card-box p {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cards-container { flex-direction: column; align-items: center; }
+  .card-box { width: 100%; }
+}
