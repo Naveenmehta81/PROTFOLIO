@@ -1,44 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .contact-container {
-  padding-left: 80px; 
-  min-height: 100vh;
-  background-color: #fbfbfd; 
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  width: 100%;
+  min-height: 100vh; 
+  background-color: #f7f7ff; 
+  
+  
   padding-top: 100px;
+  padding-left: 300px; 
+  padding-right: 50px; 
   padding-bottom: 50px;
-  gap: 100px; 
-  font-family: 'Poppins', sans-serif;
-  border: 2px solid black;
-  
-}
-.leftsidboxe{
-  border: 2px solid black;
-}
 
-
-.box{
-  flex: 1;
-  max-width: 500px;
-  max-height: 100px;
+  display: flex;
+  align-items: flex-start; 
   justify-content: center;
-  align-items: flex-start;
-  border: 5px dotted green;
+  gap: 2px; 
   
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.leftsidboxe {
+  
+  margin-top: 8%;
+  margin-left: 10%;
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+.box {
+  width: 100%;
+  text-align: left;
 }
 
 .main-heading {
-  font-size: 55px;
+  font-size: 100px; 
   font-weight: 700;
   color: #0b0b13;
   line-height: 1.1;
-  margin-bottom: 20px;
-  
+  margin-bottom: 30px;
 }
 
 .dot {
@@ -46,59 +53,80 @@
 }
 
 .contact-para {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 40px;
-  max-width: 400px;
+  font-size: 60px; 
+  font-weight: 400;
+  color: rgb(85, 85, 85);
+  line-height: 1.6; 
+  margin-bottom: 50px;
+  max-width: 10000px; 
+  text-wrap: balance; 
 }
 
-
+/* Info Icons Section */
 .info-box {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  border: 3px solid black;
+  gap: 30px;
 }
 
 .info-item {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 16px;
-  font-weight: 500;
+  align-items: center; 
+  gap: 20px;
+  font-size: 60px;
+  font-weight: 600;
   color: #0b0b13;
 }
 
 .icon {
-  font-size: 24px;
-  color: #ff9301; /* Make icons orange */
+  font-size: 80px; /* Adjusted to match text better */
+  color: #ff9301; 
+  min-width: 80px;
 }
 
-/* --- Right Section (Form Wrapper) --- */
+/* --- RIGHT SIDE (Wrapper) --- */
 .contact-right {
-  flex: 1.2; /* Give form slightly more space */
-  max-width: 600px;
-  padding-right: 50px;
+   align-items: flex-start; 
+  margin-top: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
+  flex: 1; /* Takes 50% of available space */
+  display: flex;
+  justify-content: flex-start; /* Aligns form to top */
+  padding-top: 10px; /* Slight adjustment to align visually with Heading */
 }
 
 /* --- MOBILE RESPONSIVE --- */
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1024px) {
   .contact-container {
-    flex-direction: column; /* Stack vertically */
-    padding-left: 20px;
-    padding-right: 20px;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 50px;
-    gap: 40px;
-  }
-
-  .contact-left, .contact-right {
-    max-width: 100%; /* Full width on mobile */
-    padding-right: 0;
+    gap: 60px;
   }
 
   .main-heading {
-    font-size: 40px;
+    font-size: 45px;
+    text-align: center;
+  }
+  
+  .contact-para {
+    text-align: center;
+    font-size: 16px;
+    margin: 0 auto 40px auto;
+  }
+
+  .leftsidboxe, .contact-right {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .box {
+    text-align: center;
+  }
+  
+  .info-item {
+     justify-content: center;
   }
 }

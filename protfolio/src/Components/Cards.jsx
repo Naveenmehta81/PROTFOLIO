@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "./Card";
-import "./Cards.css"; // We will put all card styles here
+import "./Cards.css"; 
 import { FaLaptopCode, FaTv } from "react-icons/fa";
 import { GiCrossbow } from "react-icons/gi";
 
@@ -24,10 +24,10 @@ const Cards = () => {
   ];
 
   return (
-    <div className="cards-wrapper">
+    <div className="cards-wrapper-about">
       <h1 className="section-title">What I do?</h1>
       
-      <div className="cards-container">
+      <div className="cards-container-about">
         {data.map((item, index) => (
           <Card 
              key={index}

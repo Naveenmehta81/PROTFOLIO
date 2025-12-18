@@ -14,9 +14,9 @@ function App() {
   
 
   return (
-    <div>
+    <div className='app-container'>
           
-         <div>
+         <div className='route-contianer'>
                 
             <Routes>
             <Route path="/" element={<Layout/>}>

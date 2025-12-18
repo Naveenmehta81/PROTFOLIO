@@ -1,16 +1,17 @@
 import React from "react";
-// Remove internal CSS import here if it's imported in parent, 
-// but fine to keep if you prefer modularity.
+// Removed unused FaFulcrum import
 
 const Card = ({ icon, title, description }) => {
   return (
-    <div className="card-box">
-      {/* The orange background shape for the icon */}
-      <div className="card-icon-bg">
-        <div className="card-icon">{icon}</div>
+    <div className="card-box-about">
+      
+      {/* 1. Renamed to distinct class for Background Circle */}
+      <div className="card-icon-bg-about">
+        {/* 2. Renamed to distinct class for Icon Symbol */}
+        <div className="card-icon-symbol-about">{icon}</div>
       </div>
       
-      <div className="card-content">
+      <div className="card-content-about">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>

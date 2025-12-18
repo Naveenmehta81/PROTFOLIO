@@ -1,159 +1,138 @@
-
 .about-page-container {
-  padding-left: 80px; 
-  min-height: 100vh;
+  padding-left: 250px; 
   background-color: #f7f7ff;
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
 }
 
-
 .bio-section {
   display: flex;
+  
 
-  align-items: flex-start;
+  align-items: flex-start; 
+  
   justify-content: center;
-  padding: 40px 50px;
-  min-height: 100vh; 
-  gap: 60px;
-  margin-top: 20px;
+  min-height: 100vh;
+  padding: 50px 50px 0 50px; 
+  gap: 50px;
 }
-
 
 .bio-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 10px;
-}
+  align-items: center; 
 
+}
 
 .image-wrapper {
   position: relative;
-  width: 800px;  
-  height: 800px; 
+  
+ 
+  width: 42vw; 
+  height: 42vw;
+  
+  
+  min-width: 450px; 
+  min-height: 450px;
+  max-width: 800px;
+  max-height: 800px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
-}
-
-
-.circle-border {
-  position: absolute;
-  width: 100%;  
-  height: 100%;  
-  border: 15px solid #ff9301; 
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  z-index: 1;
   
+  margin-bottom: 50px; 
 }
+
+
 .profile-img {
-  width: 96%;   
-  height: 96%;
+  width: 120%;   
+  height: 120%;
   border-radius: 50%;
   object-fit: cover;
-  z-index: 0;
+  z-index: 2;
   position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
-
 
 .social-icons-curve {
   position: absolute;
-  bottom: -25px; 
+  bottom: -40px; /* Adjusted for bigger image */
   display: flex;
-  gap: 15px;
+  gap: 20px;
   z-index: 5;
   background: #fff;
-  padding: 10px 25px; 
-  border-radius: 50px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
-}
-
-.social-icons-curve a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45px; 
-  height: 45px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 50%;
-  font-size: 18px; 
-  transition: 0.3s;
-}
-
-.social-icons-curve a:hover {
-  background-color: #ff9301;
+  padding: 20px 40px; 
+  border-radius: 60px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
 }
 
 
-@media (max-width: 768px) {
-  .image-wrapper {
-    width: 320px;
-    height: 320px;
-  }
-  .circle-border { border-width: 10px; }
+.profile-name-box {
+  text-align: center;
+  margin-top: 120px;
 }
+
 
 .profile-name-box h5 {
-  color: #0b0b13;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 5px;
+  color: #777;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+
 .profile-name-box h2 {
-  font-size: 100px;
-  font-weight: 700;
+  font-size: 90px;
+  font-weight: 800;
   color: #0b0b13;
-  margin-bottom: 8px;
+  line-height: 1.1;
 }
 
 
 .bio-right {
-  flex: 1.5;
-  padding-top: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  
+  
+  margin-top: 0; 
+  padding-top: 20px; 
 }
-
 
 .section-title {
-  font-size: 50px;
-  font-weight: 900;
+  font-size: 80px;
+  font-weight: 700;
   color: #0b0b13;   
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  margin-right: 40px;
   position: relative;
-  display: inline-block;
-  z-index: 1;
 }
 
-
+/* Paragraphs */
 .bio-text p {
   color: #555;
-  width: 70%;
-  font-size: 40px ;
-  font-weight: 500;
-  line-height: 1.8;
-  margin-bottom: 20px;
-
+  font-size: 50px; 
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 30px; 
+  max-width: 100%; 
 }
-
 
 .details-grid {
   display: flex;
-  padding-top: 15px;
-
-  gap: 20%;
+  margin-top: 80px;
+  gap: 100px; 
 }
 
 .detail-col p {
   margin-bottom: 15px;
-  color: rgb(85, 85, 85);
-  font-size: 40px;
+  color: #555;
+  font-size: 50px;
 }
 
 .detail-col strong {
@@ -162,22 +141,31 @@
   font-weight: 600;
 }
 
-
-@media (max-width: 900px) {
-  .bio-section {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin-top: 0;
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 1100px) {
+  .about-page-container { padding-left: 0; }
+  
+  .bio-section { 
+    flex-direction: column; 
+    text-align: center; 
+    padding: 50px 20px;
+    height: auto;
   }
   
-  .image-wrapper {
-    width: 320px;
-    height: 320px;
+  .image-wrapper { 
+    width: 350px; 
+    height: 350px; 
+    min-width: auto;
   }
   
-  .bio-right {
-    padding-top: 0;
-    text-align: center;
+  .bio-text p { 
+    margin: 0 auto 30px auto; 
+    font-size: 18px;
+  }
+  
+  .details-grid { 
+    flex-direction: column; 
+    gap: 20px; 
+    align-items: center; 
   }
 }

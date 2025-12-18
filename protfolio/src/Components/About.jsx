@@ -7,15 +7,13 @@ const About = () => {
   return (
     <div className="about-page-container">
       
-      
+    
       <div className="bio-section">
-        
-        
         <div className="bio-left">
           <div className="image-wrapper">
-            <div className="circle-border"></div>
-            <img src="/imagegirls.png" alt="Profile" className="profile-img"/>
             
+           
+            <img src="/imagegirls.png" alt="Profile" className="profile-img"/>
             
             <div className="social-icons-curve">
                <a href="#"><FaFacebookF /></a>
@@ -32,7 +30,6 @@ const About = () => {
           </div>
         </div>
 
-        
         <div className="bio-right">
           <h1 className="section-title">Biography</h1>
 
@@ -63,6 +60,8 @@ const About = () => {
       </div>
 
     
+
+      
       <div className="services-section">
          <Cards />
       </div>

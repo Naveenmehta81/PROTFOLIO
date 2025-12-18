@@ -1,57 +1,56 @@
-import React, { useEffect, useState } from 'react'
-import {apiUrl , filterData} from './Data.jsx';
+import React, { useEffect, useState } from 'react';
+import { apiUrl, filterData } from './Data.jsx';
 import Cards from './Cards';
-import './Workfilter.css'
+import './Workfilter.css';
 
 const Workfilter = () => {
-    const[course , setcourses] = useState(null);
-    const [category , setcategory] = useState(filterData[0].title);
+    const [course, setcourses] = useState(null);
+    const [category, setcategory] = useState(filterData[0].title);
 
-    console.log(course);
+    async function fetchdata() {
+        try {
+            let response = await fetch(apiUrl);
+            let data = await response.json();
+            setcourses(data.data);
+        } catch (error) {
+            console.log("Error fetching data");
+        }
+    }
 
- async function fetchdata(){
-    let response = await fetch(apiUrl);
-    let data = await response.json();
-      setcourses(data.data)
- }
+    useEffect(() => {
+        fetchdata();
+    }, []);
 
+    function filterhandler(title) {
+        setcategory(title);
+    }
 
- useEffect(() =>{
-    fetchdata();
- },[]);
+    return (
+        <div className='work-section'>
+          
+            <div className='work-header'>
+                <h1 className="section-title">My Portfolio<span className="dot">.</span></h1>
+            </div>
 
- 
+      
+            <div className='filter-menu'>
+                {filterData.map((data) => (
+                    <button
+                        key={data.id}
+                      
+                        className={`filter-btn ${category === data.title ? 'active-filter' : ''}`}
+                        onClick={() => filterhandler(data.title)}
+                    >
+                        {data.title}
+                    </button>
+                ))}
+            </div>
 
-
-  function filterhandler(title){
-    setcategory(title);
-  }
-
-
-
-
-  return (
-    <div className='filtercontainer'>
-
-        <div className='filter-button'>
-            {
-               filterData.map((data) =>(
-                <button
-                    key = {data.id}
-        className={`filter-button ${category === data.title ? 'active' : ''}`}
-        onClick={() =>filterhandler(data.title)} 
-        >
-            {data.title}
-                </button>
-               ))
-            }
+            <div className='work-container'>
+                <Cards course={course} category={category} />
+            </div>
         </div>
-        <div className='filter-cards'>
-           <Cards  course = {course} category={category}/>
-        </div>
-       
-    </div>
-  )
+    );
 }
 
 export default Workfilter;

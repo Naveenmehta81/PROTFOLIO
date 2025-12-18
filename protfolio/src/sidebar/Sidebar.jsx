@@ -16,7 +16,7 @@ const Sidebar = () => {
           <ul className='nav-ul'>
             <li className='list'> <Link to = '/'><FaHome /></Link> </li>
             <li className='list'>  <Link to  = '/About'><BsPersonRolodex /></Link></li>
-             <li className='list'><Link to = '/Awards'><CgAwards /></Link></li>
+             {/* <li className='list'><Link to = '/Awards'><CgAwards /></Link></li> */} 
             <li className='list'><Link to = '/Workfilter'><MdWork /></Link></li>
             <li className='list'> <Link to = '/Contect'><IoIosContact /></Link></li>
            
