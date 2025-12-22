@@ -1,23 +1,27 @@
+*{
+  font-family : 'Rubik', sans-serif 
+}
+
 .about-page-container {
   padding-left: 250px; 
   background-color: #f7f7ff;
-  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  overflow-y: auto ;
 }
 
 .bio-section {
   display: flex;
-  
+   margin-top: 6%;
 
   align-items: flex-start; 
-  
   justify-content: center;
   min-height: 100vh;
   padding: 50px 50px 0 50px; 
-  gap: 50px;
+  
 }
 
 .bio-left {
+  
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -33,9 +37,9 @@
   height: 42vw;
   
   
-  min-width: 450px; 
-  min-height: 450px;
-  max-width: 800px;
+  min-width: 600px; 
+  min-height: 700px;
+  max-width: 1000px;
   max-height: 800px;
 
   display: flex;
@@ -47,8 +51,10 @@
 
 
 .profile-img {
-  width: 120%;   
-  height: 120%;
+   position: relative;
+   top: 10%;
+  width: 400%;   
+  height: 130%;
   border-radius: 50%;
   object-fit: cover;
   z-index: 2;
@@ -56,40 +62,46 @@
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
+
+
 .social-icons-curve {
   position: absolute;
-  bottom: -40px; /* Adjusted for bigger image */
-  display: flex;
-  gap: 20px;
-  z-index: 5;
-  background: #fff;
-  padding: 20px 40px; 
-  border-radius: 60px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+  text-align: center;
+  font-size: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  
+    
 }
 
 
 .profile-name-box {
+  position: absolute;
+  top: 58%;
   text-align: center;
   margin-top: 120px;
 }
 
 
 .profile-name-box h5 {
-  color: #777;
-  font-size: 30px;
+  color: #0b0b13;
+  font-size: 40px;
   font-weight: 500;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 100px;
 }
 
 
 .profile-name-box h2 {
-  font-size: 90px;
-  font-weight: 800;
+  font-size: 100px;
+  font-weight: 600;
   color: #0b0b13;
-  line-height: 1.1;
+  line-height: 60px;
 }
 
 
@@ -98,25 +110,27 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
-  
-  
-  margin-top: 0; 
-  padding-top: 20px; 
+  position: relative;
+  top: 0;
+  right: 5%;
+  bottom: 5%; 
 }
 
 .section-title {
-  font-size: 80px;
-  font-weight: 700;
-  color: #0b0b13;   
+  font-size: 100px;
+  font-weight: 800;
+  color: #0b0b13;
+  margin-top: 2%;   
   margin-bottom: 40px;
   margin-right: 40px;
-  position: relative;
+position: relative;
 }
 
-/* Paragraphs */
+
 .bio-text p {
+  margin-right: 10%;
   color: #555;
-  font-size: 50px; 
+  font-size: 48px; 
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 30px; 
@@ -124,22 +138,40 @@
 }
 
 .details-grid {
+  font-family: 'Rubik';
   display: flex;
   margin-top: 80px;
-  gap: 100px; 
+  gap: 25%; 
 }
 
 .detail-col p {
   margin-bottom: 15px;
   color: #555;
   font-size: 50px;
+  
 }
 
 .detail-col strong {
   color: #0b0b13;
   margin-right: 10px;
   font-weight: 600;
+  
 }
+
+
+.line-bio{
+  position: relative;
+  top: 90%;
+  margin-left: 9%;
+  width: 70%;
+  height: 2px;
+  color: #0b0b13;
+  background-color:#0b0b13 ;
+  position: absolute;
+  margin-bottom: 10%;
+}
+
+
 
 /* --- MOBILE RESPONSIVE --- */
 @media (max-width: 1100px) {
@@ -169,3 +201,4 @@
     align-items: center; 
   }
 }
+

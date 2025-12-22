@@ -1,7 +1,7 @@
 import React from "react";
 import { SiOpenstreetmap } from "react-icons/si";
 import { MdMarkEmailRead } from "react-icons/md";
-import { FcPhoneAndroid } from "react-icons/fc";
+import { IoPhonePortraitOutline } from "react-icons/io5";
 import "./contect.css";
 import Form from "./Form";
 
@@ -30,7 +30,7 @@ const Contact = () => {
               <span>support@domain.com</span>
             </div>
             <div className="info-item">
-              <FcPhoneAndroid className="icon" />
+              <IoPhonePortraitOutline  className="icon" />
               <span>+044 9696 9696 3636</span>
             </div>
           </div>

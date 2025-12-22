@@ -3,8 +3,8 @@ import AwardsCards from './AwardsCards'
 
 const Awards = () => {
   return (
-    <div>
-        <div>
+    <div className='wrapper'>
+        <div className='contanier'> 
             <h1>Awards.</h1>
             <AwardsCards/>
         </div>
@@ -12,4 +12,4 @@ const Awards = () => {
   )
 }
 
-export default Awards
+export default Awards;

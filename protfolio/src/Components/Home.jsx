@@ -21,11 +21,12 @@ const Home = () => {
     
         <div className="text-section">
           
-        
+          
           <div className="contact-header">
             <span className="phone">+04 6543-9535-6515</span>
             <span className="email">nairobi-designer@domain.com</span>
-          </div>
+         </div>
+              
 
           <div className="intro-text">
             <h4 className="greeting">Hello, My name is</h4>
@@ -42,10 +43,11 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side: Image with Background Shape */}
+       
         <div className="image-section">
-          <div className="background-circle"></div> {/* The grey circle */}
-          <img src="/imagegirls.png" alt="Nairobi Godot" className="model-img" />
+        
+          <img src="/home-banner.png" alt="Nairobi Godot" className="model-img" />
+           <div className="background-circle"></div> 
         </div>
       </div>
     </div>

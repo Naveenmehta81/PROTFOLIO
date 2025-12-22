@@ -15,7 +15,7 @@ const Workfilter = () => {
         } catch (error) {
             console.log("Error fetching data");
         }
-    }
+    }   
 
     useEffect(() => {
         fetchdata();
@@ -47,10 +47,15 @@ const Workfilter = () => {
             </div>
 
             <div className='work-container'>
+                
                 <Cards course={course} category={category} />
             </div>
         </div>
     );
+  
+
+
+
 }
 
 export default Workfilter;

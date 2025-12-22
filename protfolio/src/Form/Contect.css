@@ -8,24 +8,19 @@
   width: 100%;
   min-height: 100vh; 
   background-color: #f7f7ff; 
-  
-  
   padding-top: 100px;
   padding-left: 300px; 
   padding-right: 50px; 
   padding-bottom: 50px;
-
   display: flex;
   align-items: flex-start; 
   justify-content: center;
   gap: 2px; 
-  
   font-family: 'Poppins', sans-serif;
 }
 
 
 .leftsidboxe {
-  
   margin-top: 8%;
   margin-left: 10%;
   flex: 1; 
@@ -62,7 +57,7 @@
   text-wrap: balance; 
 }
 
-/* Info Icons Section */
+
 .info-box {
   display: flex;
   flex-direction: column;
@@ -79,22 +74,26 @@
 }
 
 .icon {
-  font-size: 80px; /* Adjusted to match text better */
+  font-size: 80px; 
   color: #ff9301; 
   min-width: 80px;
 }
 
-/* --- RIGHT SIDE (Wrapper) --- */
+
 .contact-right {
    align-items: flex-start; 
   margin-top: 8%;
   margin-left: 10%;
   margin-right: 10%;
-  flex: 1; /* Takes 50% of available space */
+  flex: 1; 
   display: flex;
-  justify-content: flex-start; /* Aligns form to top */
-  padding-top: 10px; /* Slight adjustment to align visually with Heading */
+  justify-content: flex-start; 
+  padding-top: 10px; 
 }
+
+
+
+
 
 /* --- MOBILE RESPONSIVE --- */
 @media screen and (max-width: 1024px) {

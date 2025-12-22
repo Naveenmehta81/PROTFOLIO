@@ -4,13 +4,9 @@ import Sidebar from './Sidebar';
 
 const Layout = () => {
   return (
-    <div > {/* This Flex makes them side-by-side */}
-      
-      {/* 1. The Sidebar stays fixed */}
+    <div > 
       <Sidebar />
-
-      {/* 2. The content area takes up the rest of the space */}
-      <main >
+       <main >
         <Outlet /> 
       </main>
       

@@ -2,6 +2,7 @@ import React from 'react';
 import './About.css';
 import Cards from './Cards';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import Awards from '../Awards/Awards';
 
 const About = () => {
   return (
@@ -12,17 +13,19 @@ const About = () => {
         <div className="bio-left">
           <div className="image-wrapper">
             
+             <div className="image-line"></div>
            
-            <img src="/imagegirls.png" alt="Profile" className="profile-img"/>
+            <img src="/about-me.webp" alt="Profile" className="profile-img"/>
+           
             
             <div className="social-icons-curve">
-               <a href="#"><FaFacebookF /></a>
-               <a href="#"><FaTwitter /></a>
-               <a href="#"><FaInstagram /></a>
-               <a href="#"><FaLinkedinIn /></a>
-               <a href="#"><FaPinterestP /></a>
-            </div>
-          </div>
+              <span className='dot'>  <a href="#"><FaFacebookF /></a></span>
+               <span className='dot'> <a href="#"><FaTwitter /></a></span>
+                <span className='dot'>   <a href="#"><FaInstagram /></a></span>
+                 <span className='dot'>   <a href="#"><FaLinkedinIn /></a></span>
+                  <span className='dot'> <a href="#"><FaPinterestP /></a></span>
+             </div> 
+             </div>
           
           <div className="profile-name-box">
              <h5>UX / UI Designer</h5>
@@ -60,12 +63,12 @@ const About = () => {
       </div>
 
     
-
+      <div className="line-bio" ></div>
       
       <div className="services-section">
          <Cards />
       </div>
-
+      
     </div>
   )
 }

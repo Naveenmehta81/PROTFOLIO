@@ -1,5 +1,9 @@
+ *{
+  font-family: inherit;
+ }
+
 .form-wrapper {
-  width: 100%;
+width: 100%;
   
 }
 
@@ -51,25 +55,27 @@
   resize: none;
 }
 
-/* Button */
+
 .send-btn {
-  background-color: #0b0b13; 
+  position: relative;
+  
+  background-color:rgb(5,5,5);
+  outline-color: #0b0b13;
   color: #fff;
-  border: none;
-  padding: 18px 50px;
-  font-size: 30px;
+  padding: 20px ;
+  font-size: 50px;
   font-weight: 600;
-  border-radius: 50px;
+  border-radius: 25px;
   cursor: pointer;
-  width: fit-content;
+  width: 500px;
+  height: 140px;
   transition: all 0.3s ease;
-  margin-top: 10px;
 }
 
 .send-btn:hover {
-  background-color: #ff9301; 
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(255, 147, 1, 0.3);
+  background-color: #fff;
+  color: rgb(5,5,5);
+  transform: translateY(-5px);
 }
 
 /* Mobile adjustments */

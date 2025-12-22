@@ -29,43 +29,81 @@
 .nav-ul {
   list-style: none;
   padding: 0;
-  margin-top: 50px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
-  gap: 30px; 
+  position: relative;
+  display: inline-block;
+  
+  cursor: pointer;
+   
 }
 
 .list {
-  
-  width: 300%;
+   border: 1px solid #f0f0f0;
+   border-right: none;
+   width: 77%;
+  height: 300px;
   display: flex;
   justify-content: center;
+  position: relative;
+  
+}
+#content-list{
+  border-bottom: none;
 }
 
 
 .list a{
   color: rgb(51,51,51);
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
-  width: 120px;
-  height: 150px;
+  width: 300px;
+  height: 250px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  font-size: 50px;
+  font-size: 150px;
   text-decoration: none;
 }
 
 
+
 .list  a{
-  font-size: 50px; 
+  font-size: 80px; 
 }
 
-.list a:active {
+.list a:hover {
   background-color: #fff0d9; 
   color: #ff9301;
 }
+
+
+
+.nav-tolltip{
+  visibility: hidden;
+  width: 180px;
+  height: 80px;
+  font-size: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  position: absolute;
+   left: 240px; /* Moves it to the right of the sidebar /
+   top: 50%;    /* Moves it to the middle vertically */
+   transform: translateY(-50%); /* Centers it perfectly */
+   z-index: 100;
+}
+.nav-ul  :hover .nav-tolltip{
+   visibility: visible;
+   opacity: 1;
+}
+
+
+
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {

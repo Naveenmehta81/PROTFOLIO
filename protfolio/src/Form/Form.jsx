@@ -17,7 +17,7 @@ const Form = () => {
   }
 
   function handlerclick(event) {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault(); 
     if (data.name === "") {
       alert("Please enter info");
     } else {
