@@ -3,30 +3,27 @@ import './catagory.css'
  
 function Work() {
   const [activeFilter, setActiveFilter] = useState('All');
-
   
+
   const portfolioItems = [
-    { id: 1, src: "m-portfolio-1.webp", category: "Branding", alt: "Portfolio 1" },
-    { id: 2, src: "m-portfolio-2.webp", category: "Product"  , alt: "Portfolio 2" },
-    { id: 3, src: "m-portfolio-3.jpg", category: "Photography", alt: "Portfolio 3" },
-    { id: 4, src: "m-portfolio-4.webp", category: "Fashion", alt: "Portfolio 4" },
-    { id: 5, src: "m-portfolio-5.webp", category: "Photography", alt: "Portfolio 5" },
-    { id: 6, src: "m-portfolio-6.webp", category: "Product", alt: "Portfolio 6" },
-    { id: 7, src: "m-portfolio-7.webp", category: "Branding", alt: "Portfolio 7" },
-    { id: 8, src: "m-portfolio-8.webp", category: "Fashion", alt: "Portfolio 8" },
-    { id: 9, src: "m-portfolio-9.webp", category: "Photography", alt: "Portfolio 9" },
+    { id: 1, src: "m-portfolio-1.webp", categories: ["Branding","Fashion"], alt: "Portfolio 1" },
+    { id: 2, src: "m-portfolio-2.webp", categories: ["Photography" ,'Branding'], alt: "Portfolio 2" },
+    { id: 3, src: "m-portfolio-3.jpg",  categories: ["Photography" , 'Product' ], alt: "Portfolio 3" },
+    { id: 4, src: "m-portfolio-4.webp", categories: ["Fashion" ,'Branding'], alt: "Portfolio 4" },
+    { id: 5, src: "m-portfolio-5.webp", categories: [ 'Branding' , 'Product'], alt: "Portfolio 5" },
+    { id: 6, src: "m-portfolio-6.webp", categories: [ "Branding" ,"Fashion"], alt: "Portfolio 6" },
+    { id: 7, src: "m-portfolio-7.webp", categories: ["Branding" , "Product"], alt: "Portfolio 7" },
+    { id: 8, src: "m-portfolio-8.webp", categories: ["Fashion"  ,'Branding'], alt: "Portfolio 8" },
+    { id: 9, src: "m-portfolio-9.webp", categories: [ "Product" ,'Branding'], alt: "Portfolio 9" },
   ];
+  
 
-
-  const filteredItems = activeFilter === 'All' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === activeFilter);
-
+  const filteredItems = activeFilter === 'All' ? portfolioItems : portfolioItems.filter(item => item.categories.includes(activeFilter));
  
   const handleFilterClick = (category) => {
     setActiveFilter(category);
   };
-
+  
   return (
     <>
       <div className="wrapper">
@@ -71,7 +68,7 @@ function Work() {
                 id={`image${item.id}`}
                 src={item.src} 
                 alt={item.alt}
-              
+                className="fade-in"
               />
             ))}
           </div>

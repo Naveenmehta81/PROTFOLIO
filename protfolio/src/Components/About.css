@@ -1,22 +1,24 @@
 *{
-  font-family : 'Rubik', sans-serif 
+  font-family : 'Rubik', sans-serif ;
+   
 }
 
 .about-page-container {
   padding-left: 250px; 
   background-color: #f7f7ff;
-  overflow-x: hidden;
   overflow-y: auto ;
+  overflow-x: hidden ;
+
 }
 
 .bio-section {
-  display: flex;
+   display: flex;
    margin-top: 6%;
-
-  align-items: flex-start; 
-  justify-content: center;
-  min-height: 100vh;
-  padding: 50px 50px 0 50px; 
+   align-items: flex-start; 
+   justify-content: center;
+   min-height: 100vh;
+   padding: 50px 50px 0 50px; 
+  
   
 }
 
@@ -31,21 +33,11 @@
 
 .image-wrapper {
   position: relative;
-  
- 
-  width: 42vw; 
-  height: 42vw;
-  
-  
-  min-width: 600px; 
-  min-height: 700px;
-  max-width: 1000px;
-  max-height: 800px;
-
+  height: auto;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
   margin-bottom: 50px; 
 }
 
@@ -53,29 +45,19 @@
 .profile-img {
    position: relative;
    top: 10%;
-  width: 400%;   
-  height: 130%;
+  width: 100%;   
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
   z-index: 2;
   position: relative;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+ 
 }
 
 
 
-.social-icons-curve {
-  position: absolute;
-  text-align: center;
-  font-size: 50%;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  
-    
-}
 
 
 .profile-name-box {
@@ -91,18 +73,23 @@
   font-size: 40px;
   font-weight: 500;
   margin-bottom: 10px;
-  text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 100px;
 }
 
 
 .profile-name-box h2 {
-  font-size: 100px;
-  font-weight: 600;
+ font-size: clamp(60px, 6vw, 90px);   
+ font-weight: 600;
   color: #0b0b13;
-  line-height: 60px;
+  line-height: 100px;
 }
+
+
+
+
+
+
 
 
 .bio-right {
@@ -127,10 +114,10 @@ position: relative;
 }
 
 
-.bio-text p {
+.bio-text p { 
   margin-right: 10%;
   color: #555;
-  font-size: 48px; 
+  font-size: 50px; 
   font-weight: 400;
   line-height: 1.6;
   margin-bottom: 30px; 
@@ -141,7 +128,7 @@ position: relative;
   font-family: 'Rubik';
   display: flex;
   margin-top: 80px;
-  gap: 25%; 
+  gap: 20%; 
 }
 
 .detail-col p {
@@ -171,34 +158,4 @@ position: relative;
   margin-bottom: 10%;
 }
 
-
-
-/* --- MOBILE RESPONSIVE --- */
-@media (max-width: 1100px) {
-  .about-page-container { padding-left: 0; }
-  
-  .bio-section { 
-    flex-direction: column; 
-    text-align: center; 
-    padding: 50px 20px;
-    height: auto;
-  }
-  
-  .image-wrapper { 
-    width: 350px; 
-    height: 350px; 
-    min-width: auto;
-  }
-  
-  .bio-text p { 
-    margin: 0 auto 30px auto; 
-    font-size: 18px;
-  }
-  
-  .details-grid { 
-    flex-direction: column; 
-    gap: 20px; 
-    align-items: center; 
-  }
-}
-
+ 

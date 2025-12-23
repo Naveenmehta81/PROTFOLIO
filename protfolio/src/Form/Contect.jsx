@@ -23,7 +23,7 @@ const Contact = () => {
           <div className="info-box">
             <div className="info-item">
               <SiOpenstreetmap className="icon" />
-              <span>123 Street New York City, USA 750065.</span>
+              <span>123 Stree New York City , United States Of America 750065.</span>
             </div>
             <div className="info-item">
               <MdMarkEmailRead className="icon" />

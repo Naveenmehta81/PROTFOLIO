@@ -12,20 +12,20 @@ const About = () => {
       <div className="bio-section">
         <div className="bio-left">
           <div className="image-wrapper">
-            
-             <div className="image-line"></div>
+              
+              <img src="/about-me.webp" alt="Profile" className="profile-img"/>
            
-            <img src="/about-me.webp" alt="Profile" className="profile-img"/>
+                  {/* <div className="social-icons-curve">
+              <span className='dot icon-1'>  <a href="#"><FaFacebookF /></a></span>
+               <span className='dot icon-2'> <a href="#"><FaTwitter /></a></span>
+                <span className='dot icon-3'>   <a href="#"><FaInstagram /></a></span>
+                 <span className='dot icon-4'>   <a href="#"><FaLinkedinIn /></a></span>
+                  <span className='dot icon-5'> <a href="#"><FaPinterestP /></a></span>
+             </div>  */}
            
-            
-            <div className="social-icons-curve">
-              <span className='dot'>  <a href="#"><FaFacebookF /></a></span>
-               <span className='dot'> <a href="#"><FaTwitter /></a></span>
-                <span className='dot'>   <a href="#"><FaInstagram /></a></span>
-                 <span className='dot'>   <a href="#"><FaLinkedinIn /></a></span>
-                  <span className='dot'> <a href="#"><FaPinterestP /></a></span>
-             </div> 
              </div>
+
+           
           
           <div className="profile-name-box">
              <h5>UX / UI Designer</h5>

@@ -34,7 +34,7 @@ const Form = () => {
           <input
             className="input-field"
             type="text"
-            placeholder="Name"
+            placeholder="Full Name"
             name="name"
             value={data.name}
             onChange={handlechange}
