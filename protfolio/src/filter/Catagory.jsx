@@ -6,7 +6,7 @@ function Work() {
   
 
   const portfolioItems = [
-    { id: 1, src: "m-portfolio-1.webp", categories: ["Branding","Fashion"], alt: "Portfolio 1" },
+    { id: 1, src: "m-portfolio-1.webp", categories: ["Branding","Fashion"], Text : "boalt"  ,alt: "Portfolio 1" },
     { id: 2, src: "m-portfolio-2.webp", categories: ["Photography" ,'Branding'], alt: "Portfolio 2" },
     { id: 3, src: "m-portfolio-3.jpg",  categories: ["Photography" , 'Product' ], alt: "Portfolio 3" },
     { id: 4, src: "m-portfolio-4.webp", categories: ["Fashion" ,'Branding'], alt: "Portfolio 4" },
@@ -68,8 +68,8 @@ function Work() {
                 id={`image${item.id}`}
                 src={item.src} 
                 alt={item.alt}
-                className="fade-in"
-              />
+             />
+               
             ))}
           </div>
         </div>
